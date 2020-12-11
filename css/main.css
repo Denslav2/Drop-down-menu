@@ -1,0 +1,99 @@
+/*Обнуление стилей браузера*/
+*,*:before, *:after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    background-color: beige;
+    font-family: 'Roboto';
+    /*font-size: 2.5rem;*/
+    color: aliceblue;
+}
+
+.wrapper{
+    height: 100%;
+    padding: 50px;
+}
+
+/*Menu*/
+.menu{}
+.menu a {
+    text-decoration: none;
+}
+.menu li {
+    position: relative;
+    list-style: none;
+}
+.menu__list{
+    display: flex;
+}
+.menu__list>li{
+    margin: 0px 30px 0px 0px;
+}
+.menu__list>li:hover .sub-menu__list{
+    display: block;
+}
+.menu__link{
+    color:rgb(5, 119, 53);
+}
+.sub-menu__list{
+    display: none;
+    min-width: 150px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    padding: 20px 0px 0px 0px;
+}
+.sub-menu__list>li{
+    background-color: #fff;
+}
+.sub-menu__list>li:hover .sub2-menu__list{
+    display: block;
+}
+.sub-menu__link{
+    color:black;
+    display: inline-block;
+    padding: 5px 10px;
+}
+.sub2-menu__list{
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 100%;
+    min-width: 150px;
+    padding: 0px 0px 0px 5px;
+}
+.sub2-menu__list>li{
+    background-color: #999999;
+}
+.sub2-menu__link{
+    color:black;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+/*Mobile menu*/
+.arow {
+    position: absolute;
+    right: -20px;
+    top: 7px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid rgb(5, 119, 53);
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+.sub-arow{
+    position: absolute;
+    right: 20px;
+    top: 6px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-left: 8px solid #333;
+    border-bottom: 8px solid transparent;
+}
